@@ -1,0 +1,56 @@
+{
+  "profile": {
+    "name": "Khabane Ngom",
+    "subtitle": "PhD Student in Mathematics",
+    "intro": "I'm a PhD student in Mathematics at Cheikh Anta Diop University, working in number theory with a focus on normal numbers.",
+    "field_mark": "NUMBER THEORY  /  NORMAL NUMBERS",
+    "hero_image": "uploads/normal-numbers-fractal.png"
+  },
+  "research": {
+    "intro": "My research lies in number theory, with a particular focus on normal numbers, digit expansions and explicit constructions preserving normality properties.",
+    "topics": [
+      {
+        "title": "Normal numbers",
+        "text": "Normality and simple normality in integer bases, digit expansions, and constructions of numbers with prescribed normality properties."
+      },
+      {
+        "title": "Number theory",
+        "text": "Problems concerning expansions of real numbers, distribution of digits, and related arithmetic questions."
+      }
+    ]
+  },
+  "publications": [
+    {
+      "authors": "Khabane Ngom and Ismaila Diouf",
+      "title": "Construction of Numbers with the Same ‘Normality’ Properties as a Given Number",
+      "journal": "Springer Proceedings in Mathematics & Statistics, vol. 468, pp. 167–176",
+      "year": "2024",
+      "url": "https://doi.org/10.1007/978-3-031-66222-5_12",
+      "pdf": ""
+    }
+  ],
+  "teaching": [],
+  "talks": [
+    {
+      "year": "2024",
+      "title": "Construction of Normal Number and Abnormal Number",
+      "place": "Mathematics and Computer Science session, Dakar",
+      "url": "https://www.unchk.sn/wp-content/uploads/2024/12/Communique-et-Agenda.pdf"
+    },
+    {
+      "year": "",
+      "title": "π est-il normal ?",
+      "place": "Department of Mathematics and Computer Science, Cheikh Anta Diop University, Dakar",
+      "url": "https://www.ucad.sn/sites/default/files/Programme.pdf"
+    }
+  ],
+  "cv": {
+    "file": "",
+    "description": "Curriculum Vitae — Khabane Ngom"
+  },
+  "contact": {
+    "email": "",
+    "affiliation": "Department of Mathematics and Computer Science, Faculty of Science and Technology, Cheikh Anta Diop University, Dakar, Senegal",
+    "extra": ""
+  }
+}

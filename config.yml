@@ -1,0 +1,81 @@
+# Replace YOUR_GITHUB_USERNAME and YOUR_REPOSITORY after creating your GitHub repository.
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPOSITORY
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "website"
+    label: "My academic website"
+    files:
+      - name: "site"
+        label: "Website content"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - label: "Profile / Home"
+            name: "profile"
+            widget: "object"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - {label: "Short introduction", name: "intro", widget: "text"}
+              - {label: "Top-right fields", name: "field_mark", widget: "string"}
+              - {label: "Home photo", name: "hero_image", widget: "image"}
+          - label: "Research"
+            name: "research"
+            widget: "object"
+            fields:
+              - {label: "Introduction", name: "intro", widget: "text"}
+              - label: "Research topics"
+                name: "topics"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "text", widget: "text"}
+          - label: "Publications"
+            name: "publications"
+            widget: "list"
+            summary: "{{fields.year}} — {{fields.title}}"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Authors", name: "authors", widget: "string"}
+              - {label: "Journal / status", name: "journal", widget: "string", required: false}
+              - {label: "Year", name: "year", widget: "string"}
+              - {label: "Link (DOI/arXiv/etc.)", name: "url", widget: "string", required: false}
+              - {label: "PDF", name: "pdf", widget: "file", required: false}
+          - label: "Teaching"
+            name: "teaching"
+            widget: "list"
+            summary: "{{fields.year}} — {{fields.course}}"
+            fields:
+              - {label: "Course / activity", name: "course", widget: "string"}
+              - {label: "Year", name: "year", widget: "string"}
+              - {label: "Institution", name: "institution", widget: "string", required: false}
+              - {label: "Description", name: "description", widget: "text", required: false}
+              - {label: "Course file / notes", name: "file", widget: "file", required: false}
+          - label: "Talks & Conferences"
+            name: "talks"
+            widget: "list"
+            summary: "{{fields.year}} — {{fields.title}}"
+            fields:
+              - {label: "Title / event", name: "title", widget: "string"}
+              - {label: "Year", name: "year", widget: "string"}
+              - {label: "Place", name: "place", widget: "string", required: false}
+              - {label: "Link", name: "url", widget: "string", required: false}
+          - label: "CV"
+            name: "cv"
+            widget: "object"
+            fields:
+              - {label: "CV PDF", name: "file", widget: "file", required: false}
+              - {label: "Description", name: "description", widget: "string"}
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Professional email", name: "email", widget: "string", required: false}
+              - {label: "Affiliation", name: "affiliation", widget: "string", required: false}
+              - {label: "Additional information", name: "extra", widget: "text", required: false}
