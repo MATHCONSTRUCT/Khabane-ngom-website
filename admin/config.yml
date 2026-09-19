@@ -71,4 +71,5 @@ collections:
             widget: "object"
             fields:
               - {label: "Email", name: "email", widget: "string", required: false}
-              - {label: "Institution", name: "institution", widget: "string", required: false}
+              - {label: "Affiliation", name: "affiliation", widget: "text", required: false}
+              - {label: "Additional information", name: "extra", widget: "text", required: false}
