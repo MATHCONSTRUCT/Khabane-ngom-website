@@ -24,7 +24,8 @@ collections:
               - {label: "Subtitle", name: "subtitle", widget: "string"}
               - {label: "Short introduction", name: "intro", widget: "text"}
               - {label: "Top-right fields", name: "field_mark", widget: "string"}
-              - {label: "Home photo", name: "hero_image", widget: "image"}
+              - {label: "Home illustration", name: "hero_image", widget: "image"}
+              - {label: "Profile photo", name: "profile_photo", widget: "image", required: false}
           - label: "Research"
             name: "research"
             widget: "object"
