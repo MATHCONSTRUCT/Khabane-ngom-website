@@ -1,0 +1,74 @@
+backend:
+  name: github
+  repo: MATHCONSTRUCT/Khabane-ngom-website
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site"
+    label: "Website"
+    files:
+      - name: "content"
+        label: "Site Content"
+        file: "site.json"
+        format: "json"
+        fields:
+          - label: "Profile"
+            name: "profile"
+            widget: "object"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - {label: "Introduction", name: "intro", widget: "text"}
+              - {label: "Research field", name: "field_mark", widget: "string"}
+              - {label: "Home mathematical image", name: "hero_image", widget: "image", required: false}
+              - {label: "Profile photo", name: "profile_photo", widget: "image", required: false}
+
+          - label: "Research"
+            name: "research"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "text", widget: "text"}
+
+          - label: "Publications"
+            name: "publications"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Authors", name: "authors", widget: "string", required: false}
+              - {label: "Journal / Book", name: "venue", widget: "string", required: false}
+              - {label: "Year", name: "year", widget: "string", required: false}
+              - {label: "Link", name: "link", widget: "string", required: false}
+
+          - label: "Teaching"
+            name: "teaching"
+            widget: "list"
+            fields:
+              - {label: "Course", name: "title", widget: "string"}
+              - {label: "Description", name: "text", widget: "text", required: false}
+
+          - label: "Talks"
+            name: "talks"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Event", name: "event", widget: "string", required: false}
+              - {label: "Date", name: "date", widget: "string", required: false}
+
+          - label: "CV"
+            name: "cv"
+            widget: "object"
+            fields:
+              - {label: "CV PDF", name: "file", widget: "file", required: false}
+
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Email", name: "email", widget: "string", required: false}
+              - {label: "Institution", name: "institution", widget: "string", required: false}
